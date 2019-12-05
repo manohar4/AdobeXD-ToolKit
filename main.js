@@ -979,11 +979,9 @@ function createImagePanel(Event) {
   }
 }
 */
-.flexbox { display: flex; }
-.flexbox .stretch { flex: 1;  }
-.flexbox .normal { flex: 0; margin: 0 0 0 0.2rem; }
-.flexbox div input { padding: 0em 0em; width: 100%; }
-.flexbox div button { padding: 0em 0em; }
+.flexbox { display: flex;  margin-top:0rem }
+.flexbox input {padding-left:0.4rem !important;margin-top:0rem; width: 100%; }
+
 .container {
   position: relative;
   width: 100%;
@@ -1007,7 +1005,7 @@ function createImagePanel(Event) {
   color: white;
   font-size: 20px;
   padding: 8px;
-  text-align: right;
+    text-align: right;
 }
 
 
@@ -1017,7 +1015,7 @@ opacity:1;
 }
 
 .downloadBnt{
-width: 24px !important;
+width: 2rem !important;
 cursor: pointer;
 z-index:1000;
 cursor:pointer;
@@ -1025,18 +1023,30 @@ cursor:pointer;
 
 .alert {
 display: none;
-  padding: 4px;
+  padding: 0.4rem;
   background-color: #f44336;
   color: white;
   border-Color: #f44336;
   border-radius: 4px;
   font-size: 14px;
-  width: calc(90%);
+  width: calc(100%);
+}
+
+.info {
+display: fixed;
+  padding: 0.4rem;
+  background-color: #008FF7;
+  color: white;
+  border-Color: #008FF7;
+  border-radius: 4px;
+  font-size: 12px;
+  width: calc(100%);
 }
 
 .closebtn {
 float: right;
   margin-right: 5px;
+margin-left:0.4rem;
   color: white;
   font-weight: regular;
   font-size: 20px;
@@ -1053,15 +1063,11 @@ float: right;
        
 </style>
         <div id="imagePanelId"  style="height:calc(100vh - 156px);">
-            <div class="flexbox">
-                <div class="stretch">
-                    <input type="search"  uxp-quiet="false" id="imageSearchId" value="" placeholder="Search" />
-                </div>
-                <div class="normal">
-                    <button uxp-quiet="false" style="margin-top: 3px" id="searchImageId" uxp-variant="action" title="Swap the values">
+            <div class="flexbox" style="margin-top:0rem;padding:0rem">
+                <input style="flex:1;margin:0rem !important" type="search"   uxp-quiet="false" id="imageSearchId" value="" placeholder="Search" />
+                <button uxp-quiet="false"  style="margin-top: 0rem" id="searchImageId" uxp-variant="action" title="Click to seach">
                         <img src="./images/go.png" />
                     </button>
-                </div>
             </div>
 
 
@@ -1069,6 +1075,10 @@ float: right;
                 <div class="scrollableContainer"  style="overflow-y: scroll; height:100%">
 <div id="ImageAlertID" style="position: fixed" class="alert">
   <span class="closebtn" id="closebtn">&times;</span> <span id="AlertMessageId"> Please select a shape layer.</span>
+</div>
+
+<div id="ImageInfoID" style="position: fixed" class="info">
+ <span id="AlertMessageId"> <b>Step 1</b> : Please select shape Layer(s).<br/> <b>Step 2</b> : Search for any image from the Search panael.<br/> <b>Step 3</b>: Click on the download Icon,which is shown on hover of an image.</span>
 </div>
             <div class="row" id="imageGridId">
                    
@@ -1078,6 +1088,16 @@ float: right;
 
         `
 
+    /*<div class="stretch">
+                    <input type="search"  uxp-quiet="false" id="imageSearchId" value="" placeholder="Search" />
+                </div>
+                <div class="normal">
+                    <button uxp-quiet="false" style="margin-top: 3px" id="searchImageId" uxp-variant="action" title="Swap the values">
+                        <img src="./images/go.png" />
+                    </button>
+                </div>*/
+    
+    
 
     panel = document.createElement("div");
     panel.innerHTML = HTML;
@@ -1104,7 +1124,7 @@ float: right;
 
 
 function onImageSearch(event) {
-
+    document.getElementById("ImageInfoID").style.display = "none";
     if (!navigator.onLine) {
 
         var AlertMessageId = document.getElementById("AlertMessageId");
@@ -1114,6 +1134,7 @@ function onImageSearch(event) {
         return
     }
     document.getElementById("imageGridId").innerHTML = '';
+    
     var queryString = document.getElementById("imageSearchId").value;
     queryString = queryString.replace(" ", "-");
     var apiKey = "0e3c983027e4658f85fd6b30872294e5d8be20e0eaa71ca6a0b56fa2b27270b5";
@@ -1175,7 +1196,8 @@ function onImageSearch(event) {
                 image.draggable = true;
 
                 downloadBnt.addEventListener("click", function (event) {
-
+                    
+                    document.getElementById("ImageInfoID").style.display = "none !important";
                     var selectionItems = scenegraph.selection.items;
 
                     if (selectionItems.length !== 1) {
@@ -1246,6 +1268,7 @@ function onImageSearch(event) {
 
             gridRow.appendChild(column);
             document.getElementById("ImageAlertID").style.display = "none";
+            document.getElementById("ImageInfoID").style.display = "none";
         }
 
 
