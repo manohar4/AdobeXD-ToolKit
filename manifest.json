@@ -60,11 +60,7 @@
         {
             "type": "panel",
             "label": "Find and Replace",
-            "panelId": "finderId",
-            "shortcut": {
-                "mac": "Cmd+Alt+1",
-                "win": "Ctrl+Alt+1"
-            }
+            "panelId": "finderId"
         },
         {
             "type": "menu",
@@ -96,11 +92,7 @@
               {
             "type": "panel",
             "label": "UnSplash it",
-            "panelId": "unSplashId",
-            "shortcut": {
-                "mac": "Cmd+Alt+5",
-                "win": "Ctrl+Alt+5"
-            }
+            "panelId": "unSplashId"
         }
     ]
 }

@@ -793,9 +793,7 @@ function groupRemover(node) {
     } else if (node.children.length > 1) {
         node.children.forEach(node => {
             var node = node;
-            console.log(node);
             var maskedGroupCheck = node.mask ? "Masked Group" : "Plain Group";
-            console.log(maskedGroupCheck);
             if (maskedGroupCheck === "Plain Group" && node instanceof Group) {
                 var parentCheck = node.parent.mask ? "Masked Group" : "Plain Group";
                 if (parentCheck !== "Masked Group") {
@@ -1078,10 +1076,9 @@ margin-left:0.4rem;
 </div>
 
 <div id="ImageInfoID" style="position: fixed" class="info">
- <span id="AlertMessageId"> <b>Step 1</b> : Please select shape Layer(s).<br/> <b>Step 2</b> : Search for any image from the Search panael.<br/> <b>Step 3</b>: Click on the download Icon,which is shown on hover of an image.</span>
+ <span id="AlertMessageId"> <b>Step 1</b> : Please select shape Layer(s).<br/> <b>Step 2</b> : Search for any image from the Search panael.<br/> <b>Step 3</b>: Click on the download Icon,which will appear on hover of an image.</span>
 </div>
             <div class="row" id="imageGridId">
-                   
             </div>
           </div>
         </div>
@@ -1096,8 +1093,8 @@ margin-left:0.4rem;
                         <img src="./images/go.png" />
                     </button>
                 </div>*/
-    
-    
+
+
 
     panel = document.createElement("div");
     panel.innerHTML = HTML;
@@ -1134,7 +1131,7 @@ function onImageSearch(event) {
         return
     }
     document.getElementById("imageGridId").innerHTML = '';
-    
+
     var queryString = document.getElementById("imageSearchId").value;
     queryString = queryString.replace(" ", "-");
     var apiKey = "0e3c983027e4658f85fd6b30872294e5d8be20e0eaa71ca6a0b56fa2b27270b5";
@@ -1196,7 +1193,7 @@ function onImageSearch(event) {
                 image.draggable = true;
 
                 downloadBnt.addEventListener("click", function (event) {
-                    
+
                     document.getElementById("ImageInfoID").style.display = "none !important";
                     var selectionItems = scenegraph.selection.items;
 
@@ -1391,9 +1388,10 @@ module.exports = {
         // definitions for each panelId in manifest go here
         finderId: {
             show(event) {
-                console.log("find Panel");
                 if (panel) {
                     if (window.panelId === "finderId") {
+                        document.querySelector("#imagePanelId").style.display = "hidden";
+                        document.querySelector("#findAndReplaceBodyID").style.display = "inline";
                         document.querySelector("#txtV").value = window.findValue;
                         document.querySelector("#txtH").value = window.replaceValue;
                         return;
@@ -1415,7 +1413,6 @@ module.exports = {
                 //                }
                 //   event.node.getElementById("#imagePanelId").style.display = "hidden";
                 //                event.node.innerHTML="";
-                console.log("just before create");
                 event.node.appendChild(create());
                 var keyValue = document.querySelector("#dropId").options[0].value;
                 //    console.log(keyValue);
@@ -1432,17 +1429,20 @@ module.exports = {
                 console.log("unSplash Panel");
                 if (panel) {
                     if (window.panelId === "unSplashId") {
+                        document.querySelector("#imagePanelId").style.display = "inline";
                         return;
                     } else {
                         window.panelId = "unSplashId";
-                        document.getElementById("findAndReplaceBodyID").style.display = "hidden";
-                        if (document.getElementById("imagePanelId")) {
-                            console.log("whatthe heck");
-                            document.getElementById("imagePanelId").style.display = "inline";
+                        document.querySelector("#findAndReplaceBodyID").style.display = "hidden";
+                    //    console.log(document.querySelector("#imagePanelId"));
+                        if (document.querySelector("#imagePanelId")) {
+                        //    console.log(document.querySelector("#imagePanelId").style.display);
+                            document.querySelector("#imagePanelId").style.display = "inline";
+                        //    console.log(document.querySelector("#imagePanelId").style.display);
                             return;
                         }
 
-                        return;
+                       
 
                     }
 
@@ -1455,7 +1455,9 @@ module.exports = {
                 // event.node.getElementById("findAndReplaceBodyID").style.display = "hidden";
                 event.node.appendChild(createImagePanel());
             },
-            hide,
+            hide(event){
+                document.querySelector("#imagePanelId").style.display = "hidden";
+            },
             update
         }
     },
