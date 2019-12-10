@@ -1229,7 +1229,7 @@ function onImageSearch(event) {
 
                         // [6]
                         editDocument({
-                            editLabel: "Increase rectangle size"
+                            editLabel: "UnSpash it"
                         }, function (selection) {
 
                             console.log(window.ImageDropSelectionCount);
@@ -1334,7 +1334,6 @@ function xhrBinary(url) {
 
 
 function dragStart(event) {
-    console.log("here");
     const target = event.target;
     const dataTransfer = event.dataTransfer;
     const mimeType = target.dataset.dragMimeType || "image/jpg";
@@ -1344,6 +1343,76 @@ function dragStart(event) {
     dragItem.set("text/html", `<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><img alt="Image" src="${target.src}"/>`);
     dataTransfer.items.push(dragItem);
     dragItem.element = target;
+}
+
+
+
+
+
+
+
+function onloremipsum(Selection){
+    
+
+    let commands = require("commands");
+    window.stoploop = false;
+    
+
+    var loremSourceText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut placerat orci nulla. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Tempor id eu nisl nunc mi ipsum faucibus. Fusce id velit ut tortor pretium. Massa ultricies mi quis hendrerit dolor magna eget. Nullam eget felis eget nunc lobortis. Faucibus ornare suspendisse sed nisi. Sagittis eu volutpat odio facilisis mauris sit amet massa. Erat velit scelerisque in dictum non consectetur a erat. Amet nulla facilisi morbi tempus iaculis urna. Egestas purus viverra accumsan in nisl. Feugiat in ante metus dictum at tempor commodo. Convallis tellus id interdum velit laoreet. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Viverra aliquet eget sit amet tellus cras adipiscing enim eu. Ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Dui faucibus in ornare quam. In iaculis nunc sed augue lacus viverra vitae congue. Vitae tempus quam pellentesque nec nam aliquam sem et. Ut morbi tincidunt augue interdum. Sem fringilla ut morbi tincidunt augue. Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. In est ante in nibh mauris. Nam aliquam sem et tortor consequat id porta nibh. Diam quis enim lobortis scelerisque fermentum dui faucibus. Non curabitur gravida arcu ac. Magna fringilla urna porttitor rhoncus dolor. Aenean et tortor at risus viverra adipiscing. Dignissim sodales ut eu sem. Quam quisque id diam vel quam elementum pulvinar etiam non. Eleifend quam adipiscing vitae proin sagittis. Enim facilisis gravida neque convallis a cras semper. Risus commodo viverra maecenas accumsan. Sit amet porttitor eget dolor morbi non arcu risus. Vitae et leo duis ut diam quam. Aliquam faucibus purus in massa tempor. Quisque egestas diam in arcu cursus. Nibh sit amet commodo nulla facilisi nullam. Lacus luctus accumsan tortor posuere ac. Risus quis varius quam quisque id diam vel quam elementum. Scelerisque purus semper eget duis at. Pretium lectus quam id leo in vitae turpis massa sed. Lobortis elementum nibh tellus molestie nunc non blandit massa. Ut tortor pretium viverra suspendisse potenti nullam ac tortor. Posuere morbi leo urna molestie at elementum eu. Viverra adipiscing at in tellus integer. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Quis blandit turpis cursus in hac habitasse. Sagittis id consectetur purus ut faucibus pulvinar. Ultrices eros in cursus turpis massa. Sit amet nulla facilisi morbi tempus. Mauris rhoncus aenean vel elit. Nulla facilisi cras fermentum odio eu feugiat. Feugiat scelerisque varius morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae semper. Amet nisl suscipit adipiscing bibendum est ultricies integer. Urna nunc id cursus metus aliquam eleifend. Ullamcorper malesuada proin libero nunc consequat interdum varius. Aliquet sagittis id consectetur purus ut faucibus pulvinar. Tincidunt dui ut ornare lectus sit. Quis risus sed vulputate odio ut enim. Diam sollicitudin tempor id eu nisl nunc mi ipsum. Volutpat odio facilisis mauris sit amet. Pellentesque sit amet porttitor eget dolor morbi non arcu. Pulvinar mattis nunc sed blandit libero volutpat. Amet nisl suscipit adipiscing bibendum est ultricies integer. Posuere urna nec tincidunt praesent semper feugiat nibh sed. In dictum non consectetur a erat. Porta nibh venenatis cras sed felis eget. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Pulvinar sapien et ligula ullamcorper. Pharetra convallis posuere morbi leo. Lacus laoreet non curabitur gravida arcu ac. Neque ornare aenean euismod elementum nisi quis eleifend. Tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum. Faucibus purus in massa tempor nec feugiat nisl. Viverra aliquet eget sit amet tellus cras adipiscing enim. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Mi bibendum neque egestas congue quisque egestas diam. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. At augue eget arcu dictum varius duis at consectetur. Ipsum dolor sit amet consectetur adipiscing elit. Varius morbi enim nunc faucibus a pellentesque sit amet. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Molestie a iaculis at erat pellentesque. Rutrum quisque non tellus orci. Orci eu lobortis elementum nibh tellus molestie. Viverra mauris in aliquam sem. Id nibh tortor id aliquet lectus proin. Cursus in hac habitasse platea dictumst. In vitae turpis massa sed elementum tempus egestas sed sed. Sed ullamcorper morbi tincidunt ornare. Sit amet consectetur adipiscing elit duis. Vitae nunc sed velit dignissim sodales ut eu. Dignissim enim sit amet venenatis urna cursus eget nunc. Sodales ut eu sem integer vitae. Cursus risus at ultrices mi tempus imperdiet nulla. Nisl tincidunt eget nullam non nisi est sit. Euismod quis viverra nibh cras pulvinar mattis nunc. Vestibulum mattis ullamcorper velit sed. Tincidunt lobortis feugiat vivamus at augue eget. Bibendum enim facilisis gravida neque convallis. Elementum facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Proin sed libero enim sed faucibus turpis. Ut diam quam nulla porttitor massa id neque. Elementum eu facilisis sed odio morbi quis commodo. Semper quis lectus nulla at volutpat diam. Sit amet purus gravida quis blandit. Sit amet dictum sit amet justo donec enim diam. Nulla aliquet porttitor lacus luctus accumsan. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et. Pellentesque elit eget gravida cum sociis natoque penatibus et. Amet venenatis urna cursus eget. Ac turpis egestas maecenas pharetra convallis posuere morbi. Nulla pellentesque dignissim enim sit amet venenatis urna cursus eget. Convallis a cras semper auctor neque vitae. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna. Lacus laoreet non curabitur gravida arcu ac. Justo laoreet sit amet cursus sit. Blandit massa enim nec dui nunc. Consectetur purus ut faucibus pulvinar elementum. Quam quisque id diam vel quam elementum. Aliquam ultrices sagittis orci a scelerisque. Commodo nulla facilisi nullam vehicula ipsum. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Fusce id velit ut tortor pretium viverra suspendisse potenti. Nullam eget felis eget nunc lobortis mattis aliquam faucibus. Nisi quis eleifend quam adipiscing. Consectetur libero id faucibus nisl tincidunt eget nullam non nisi. Purus in massa tempor nec feugiat. Ut aliquam purus sit amet. Sem fringilla ut morbi tincidunt. Orci dapibus ultrices in iaculis nunc sed augue lacus. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Volutpat diam ut venenatis tellus. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Turpis nunc eget lorem dolor sed. Pellentesque sit amet porttitor eget dolor morbi non arcu risus. Quis lectus nulla at volutpat diam ut. Mauris cursus mattis molestie a. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Ac auctor augue mauris augue neque gravida in fermentum et. Sit amet massa vitae tortor condimentum. Sagittis vitae et leo duis ut diam quam. Nunc non blandit massa enim nec dui nunc. Dis parturient montes nascetur ridiculus mus. Lacus sed turpis tincidunt id. Facilisi cras fermentum odio eu feugiat pretium nibh. Pharetra convallis posuere morbi leo urna. Velit egestas dui id ornare arcu odio ut. Gravida cum sociis natoque penatibus et magnis. Mus mauris vitae ultricies leo integer. Ultricies tristique nulla aliquet enim tortor. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Ridiculus mus mauris vitae ultricies. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Tempor id eu nisl nunc mi. Enim diam vulputate ut pharetra sit. Elementum integer enim neque volutpat ac tincidunt vitae semper quis. Feugiat sed lectus vestibulum mattis. Cras pulvinar mattis nunc sed blandit libero. Ut aliquam purus sit amet. Quam lacus suspendisse faucibus interdum posuere. Sollicitudin tempor id eu nisl nunc mi. Nunc lobortis mattis aliquam faucibus purus in massa tempor. Quis commodo odio aenean sed adipiscing. Enim neque volutpat ac tincidunt vitae semper quis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Sed egestas egestas fringilla phasellus faucibus scelerisque. Congue eu consequat ac felis donec et. Cras ornare arcu dui vivamus arcu felis bibendum ut. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Sagittis orci a scelerisque purus semper eget. Habitant morbi tristique senectus et netus et malesuada fames ac. Urna neque viverra justo nec ultrices dui sapien eget mi. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Elementum curabitur vitae nunc sed velit dignissim sodales ut eu. Est sit amet facilisis magna. Bibendum arcu vitae elementum curabitur vitae nunc sed velit. Dolor sit amet consectetur adipiscing elit pellentesque. Libero justo laoreet sit amet. Convallis a cras semper auctor neque. Nibh cras pulvinar mattis nunc sed blandit. Neque sodales ut etiam sit amet nisl purus in mollis. Ac turpis egestas sed tempus. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Elementum integer enim neque volutpat. Lectus nulla at volutpat diam ut venenatis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Lectus quam id leo in vitae.";
+    var loremArray = loremSourceText.trim().split(" ");
+   // console.log(loremArray);
+    
+    //  console.log(scenegraph.selection.items);
+    var selectionItem = scenegraph.selection.items;
+    if (selectionItem.length === 0) {
+        alert("Information", "Please select atleast one Text layer");
+        return;
+    } else {
+        var length = selectionItem.length;
+        var flag = true;
+        for (var i = 0; i <= length - 1; i++) {
+            var newfill = selectionItem[i].fill;
+            var newstroke = selectionItem[i].stroke;
+
+            //below if checks for text and having both fill and stroke then only it executes, else its goes 
+            if (selectionItem[i] instanceof Text ) {
+                var loremResult = "";
+                var repeatCheck = 1;
+
+                if(selectionItem[i].areaBox){
+
+                    for(var j=0;j<=loremArray.length-1;j++){
+                        var loremResultPrevious = loremResult;
+                        loremResult = loremResult+" "+loremArray[j];
+                        selectionItem[i].text = loremResult;
+                        if(selectionItem[i].clippedByArea){
+                            selectionItem[i].text = loremResultPrevious;
+                            break;
+                        }
+                        if(j=== 1492){
+                            j =0;
+                            repeatCheck++;
+                            if(repeatCheck === 3){
+                                break;
+                            }
+                        }
+
+                        if(window.stoploop){
+                            break;
+                        }
+                    }
+                }
+                else{
+                    selectionItem[i].text = "Lorem Ipsum";
+                }
+                //selectionItem[i].text = "Lorem Ipsum My name is manohar My name is manoharMy name is manohar";
+                var flag = false;
+            }
+        }
+        if (flag) {
+            alert("Information", "Please Select atleast one Text Layer");
+        }
+    }
 }
 
 
@@ -1381,7 +1450,8 @@ module.exports = {
         // definitions for each commandId in manifest go here
         swapId: onSwap,
         groupId: onGroupCleaner,
-        swapFillBorderId: onswapFillBorder
+        swapFillBorderId: onswapFillBorder,
+        loremipsumId: onloremipsum
 
     },
     panels: {
@@ -1442,8 +1512,6 @@ module.exports = {
                             return;
                         }
 
-                       
-
                     }
 
                 } else {
@@ -1463,11 +1531,6 @@ module.exports = {
     },
 
 };
-
-
-//Removed (where ever I submit below two should be changed)
-// <option value="key1">Entire Document</option> ---> from the Dropdown of find and Replace
-//and check Code Change - 0004444 
 
 
 // Next Version : Changes

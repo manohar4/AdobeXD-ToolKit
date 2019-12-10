@@ -93,6 +93,15 @@
             "type": "panel",
             "label": "UnSplash it",
             "panelId": "unSplashId"
-        }
+        },
+        {
+            "type": "menu",
+            "label": "Quick Lorem ipsum",
+            "commandId": "loremipsumId",
+            "shortcut": {
+                "mac": "Cmd+Alt+l",
+                "win": "Cmd+Alt+l"
+            }
+         }
     ]
 }
