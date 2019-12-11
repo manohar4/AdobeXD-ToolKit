@@ -1,7 +1,7 @@
 {
     "id": "0d1338e0",
     "name": "Tool Kit",
-    "version": "2.0.1",
+    "version": "2.0.2",
 
     "description": "Handy tools to improve your workflow\n\n- Find and Replace: Ability to find text and replace with new text\n- Swap any 2 Items: Can swap the postion of 2 items, that are been selected anywhere in the document\n- Group cleaner: Cleanup all your Redundent Groups used in your entire canvas\n- Swap Fill and Border: Swaps fill and border colors of Selected shape Layer(s) and also Text Layers, if both fill and border are available\n- UnSplash it - Download and Mask beautiful unSplash images, right from the plugin\nand many more to come....\nReach out to manoharmanu4444@gmail.com for any concerns or any bugs",
     "summary": "Tools to improve your workflow",
